@@ -35,6 +35,14 @@ $(document).ready(function(){
         }
       ]
     });
-  })
+  });
+
+  $(".category_menu a").on('click', function(){
+    var $id = $(this).attr('href');
+    var $pos = $($id).offset().top - 90 
+    $('html, body').animate({
+      scrollTop: $pos + 'px'
+    }, 1);
+  });
 
 });

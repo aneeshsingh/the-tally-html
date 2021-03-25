@@ -107,6 +107,10 @@ h5{
 	background-color: #34AED5;
 }
 
+.bg-green{
+	background-color: #26AEAC;
+}
+
 .text-dark, .text-dark p{
 	color: #000;
 }
@@ -248,9 +252,20 @@ a.color-grad:hover, .slide-card:hover .color-grad{
 
 .footer{
 	color: #000;
-	padding: 40px 0;
 	background: #fff;
+	position: relative;
+	padding: 50px 0 40px;
 	border-top: 1px solid #8B8B8B;
+}
+.footer:before{
+	border-radius: 50px 0 0 50px;
+	background: #34AED5;
+	position: absolute;
+	height: 80px;
+	content: '';
+	width: 40px;
+	top: 35px;
+	right: 0;
 }
 .footer p{
 	color: inherit;
@@ -505,11 +520,12 @@ a.color-grad:hover, .slide-card:hover .color-grad{
 	max-height: 85%;
 	margin: auto;
 }
-.card-shape-3:hover .slide-card-image img, .slide-card:hover .slide-card-image{
-	-webkit-transform: scale(1.1) translateY(-5px);
-	-ms-transform: scale(1.1) translateY(-5px);
-	-o-transform: scale(1.1) translateY(-5px);
-	transform: scale(1.1) translateY(-5px);
+/*.card-shape-3:hover .slide-card-image img, */
+.slide-card:hover .slide-card-image{
+	-webkit-transform: scale(1.08) translateY(-5px);
+	-ms-transform: scale(1.08) translateY(-5px);
+	-o-transform: scale(1.08) translateY(-5px);
+	transform: scale(1.08) translateY(-5px);
 }
 .card-shape-3 .d-flex{
 	min-height: 50px;
@@ -551,6 +567,7 @@ a.color-grad:hover, .slide-card:hover .color-grad{
 }
 .section-title h2{
 	max-width: 75%;
+	font-size: 32px;
 	text-transform: uppercase;
 }
 .section-title h3{
@@ -574,6 +591,12 @@ a.color-grad:hover, .slide-card:hover .color-grad{
 	position: absolute;
 	max-width: 200px;
 	left: -80px;
+	bottom: -45px;
+}
+.shape-bottom-right{
+	position: absolute;
+	max-width: 200px;
+	right: -80px;
 	bottom: -45px;
 }
 
@@ -690,8 +713,8 @@ a.color-grad:hover, .slide-card:hover .color-grad{
 .inner-banner-area{
 	padding-top: 48px;
 	margin-bottom: 60px;
-	background-size: 60%;
-	-webkit-background-size: 60%;
+	-webkit-background-size: 54% auto;
+	background-size: 54% auto;
 	background-position: top right -10%;
 	background-repeat: no-repeat;
 }
@@ -703,6 +726,17 @@ a.color-grad:hover, .slide-card:hover .color-grad{
 	width: 100%;
 }
 img.banner-image{
+	max-width: 100%;
+	display: block;
+	width: 100%;
+}
+div.banner-image{
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 100%;
+	border-radius: 100%;
 	max-width: 100%;
 	display: block;
 	width: 100%;
@@ -817,4 +851,8 @@ ul.category_menu > li:nth-last-child(-n+2) .subcategory_menu{
 	-ms-transform: translateY(-80%);
 	-o-transform: translateY(-80%);
 	transform: translateY(-80%);
+}
+
+.most-popular{
+	background: transparent url('../images/most-popular.png') no-repeat center bottom / cover;
 }
